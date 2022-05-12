@@ -12,7 +12,7 @@ export function Navbar () {
       <nav className='py-5 d-flex flex-row align-items-center justify-content-between'>
         <ul>
           <List>
-            <button type="button" className='btn btn-light mt-2'><Link style={{"text-decoration": "none", "color": "black"}} to="/">Home</Link></button>
+            <button type="button" className='btn btn-light mt-2'><Link style={{"textDecoration": "none", "color": "black"}} to="/">Home</Link></button>
           </List>
         </ul>
         {user ? (

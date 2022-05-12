@@ -11,8 +11,9 @@ export function Home() {
     useEffect(() => {
   
       async function fetchCoinList(){
-        return await axios.get("https://api.coingecko.com/api/v3/coins/list")
+        return await axios.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=inr&order=market_cap_desc&per_page=100&page=1&sparkline=false")
         .then(res => {
+          console.log(res)
           setCoins(res.data)
         })
         .catch(err => {
@@ -33,9 +34,10 @@ export function Home() {
           <ul>
             {coins.map(coin => {
               return(
-                  <List key={coin.id} className="py-3 px-2 mt-2">
-                    <StyledLink to={`/${coin.id}`} >
-                        {coin.id}
+                  <List key={coin.id} className="py-3 px-3 mt-2">
+                    <img src={coin.image} alt={coin.id} style={{"height": "30px", "width": "30px"}} />
+                    <StyledLink className='ms-3' to={`/${coin.id}`} >
+                        {coin.name}
                     </StyledLink>
                   </List>
               )
