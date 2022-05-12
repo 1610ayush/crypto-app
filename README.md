@@ -1,3 +1,8 @@
+This app shows the updated price value of all crypto currencies in INR.
+
+You can see this app live on https://grand-paletas-048ce0.netlify.app
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
